@@ -22,12 +22,17 @@ end
 def continents
   # List all the continents - just once each.
   execute(<<-SQL)
+    SELECT DISTINCT continent
+    FROM countries
   SQL
 end
 
 def africa_gdp
   # Give the total GDP of Africa.
   execute(<<-SQL)
+    SELECT SUM(GDP)
+    FROM countries
+    WHERE x
   SQL
 end
 
